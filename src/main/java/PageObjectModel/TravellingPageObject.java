@@ -12,7 +12,7 @@ public class TravellingPageObject {
 	By cancel=By.xpath("//*[name()='path' and contains(@d,'M12 2a10 1')]");
 	By city=By.xpath("//input[@id='destinationInput-input']");
 	By date=By.xpath("//button[@data-testid='depart-btn']//span[@class='BpkText_bpk-text__OTg0N BpkText_bpk-text--body-default__N2U4M SearchControlButton_placeholder__MThkM'][normalize-space()='Add date']");
-	By next=By.xpath("//*[name()='path' and contains(@d,'M7.8 4.287')]");
+	By next=By.xpath("//button[@aria-label='Next month, January']//span//*[name()='svg']");
 	By month=By.xpath("//h2[normalize-space()='November']");
 	
 	public TravellingPageObject(WebDriver d2) {

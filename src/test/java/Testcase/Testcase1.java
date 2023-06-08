@@ -8,8 +8,10 @@ import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.devtools.idealized.Javascript;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
@@ -52,7 +54,10 @@ public class Testcase1 extends BaseClass{
 		String month="";
 		while(!(month.equals("November")))     {
 			
-			obj.clicknext().click();
+			JavascriptExecutor js= (JavascriptExecutor) d;
+			
+			js.executeScript("arguments[0].click()", obj.clicknext());
+			
 			WebElement w2=obj.pickmonth();
 			month=w2.getText();
 		}
